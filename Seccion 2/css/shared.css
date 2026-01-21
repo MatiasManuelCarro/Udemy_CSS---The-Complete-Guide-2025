@@ -1,0 +1,155 @@
+* {
+  /* Aplica border-box a TODOS los elementos */
+  box-sizing: border-box;
+}
+
+html {
+    scrollbar-color: #19b84c transparent; /* thumb | track */
+    scrollbar-width: thin;
+  }
+
+body {
+  font-family: "Public Sans", sans-serif;
+  /*body tiene su propio margen por defecto, que lo pone el navegador. se puede cambiar desde css */
+  margin: 0;
+}
+
+.main-header {
+  width: 100%;
+  /* Codigo para la barra navegadora */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Fin codigo barra navegadora */
+  background-color: #2ddf5c;
+  padding: 8px 16px;
+  z-index: 1;
+}
+
+.main-header > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-header__brand {
+  color: #0e4f1f;
+  text-decoration: none; /* elimina el subrayado del link */
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  width: calc(
+    100% - 75px
+  ); /* el total de la pagina menos los pixel que ocupa el link de uhost */
+  vertical-align: middle;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-nav__item a {
+  /* a se refiere a los liks - son los links dentro de main-nav__item */
+  color: #0e4f1f;
+  text-decoration: none; /* elimina el subrayado del link */
+  font-weight: bold;
+  padding: 3px;
+}
+
+/* se agrupan estas dos clases debajo 
+  .main-nav__item a:hover 
+    color: white;
+  }
+  
+  .main-nav__item a:active {
+    color: white;
+  
+  }
+  
+  */
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta a {
+  color: white;
+  background-color: #ff1b68;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+  color: #ff1b68;
+  background: white;
+  border: none;
+}
+
+.button {
+  background-color: #0e4f1f;
+  color: white;
+  font: inherit; /* Fuerza que se implemente la herencia de la fuente que elegimos, en vez de usar la por 
+    defecto del navegador*/
+  border: 1.5px solid #0e4f1f;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer; /* Cambia el cursor a la mano*/
+}
+
+.button:hover {
+  background: white;
+  color: #0e4f1f;
+}
+
+.button:active {
+  /* mueve el boton a lpresionarse 2x hacia abajo y lo achica*/
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 2px 0 #2c5fa8;
+}
+
+.button:focus {
+  /* remueve el borde azul del focus del boton */
+  outline: none;
+}
+
+.main-footer {
+  background: black;
+  padding: 32px;
+  margin-top: 48px;
+}
+
+.main-footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer__link {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-footer__link a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+  color: #ccc;
+}

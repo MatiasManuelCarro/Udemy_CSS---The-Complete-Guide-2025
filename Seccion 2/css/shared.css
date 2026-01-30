@@ -12,6 +12,7 @@ body {
   font-family: "Public Sans", sans-serif;
   /*body tiene su propio margen por defecto, que lo pone el navegador. se puede cambiar desde css */
   margin: 0;
+  overflow-x: hidden;
 }
 
 .backdrop {
@@ -20,8 +21,8 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0,0,0,0.5);
 }
 
@@ -42,6 +43,29 @@ body {
   vertical-align: middle;
 }
 
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+}
+
+
 .main-header__brand {
   color: #0e4f1f;
   text-decoration: none; /* elimina el subrayado del link */
@@ -49,6 +73,7 @@ body {
   font-size: 1.5rem;
   height: 1.5rem;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .main-header__brand img {
@@ -58,7 +83,7 @@ body {
 .main-nav {
   display: inline-block;
   text-align: right;
-  width: calc(100% - 74px); /* el total de la pagina menos los pixel que ocupa el link de uhost */
+  width: calc(100% - 122px); /* el total de la pagina menos los pixel que ocupa el link de uhost */
   vertical-align: middle;
 }
 
@@ -73,7 +98,8 @@ body {
   margin: 0 16px;
 }
 
-.main-nav__item a {
+.main-nav__item a, 
+.mobile-nav__item a{
   /* a se refiere a los liks - son los links dentro de main-nav__item */
   color: #0e4f1f;
   text-decoration: none; /* elimina el subrayado del link */
@@ -99,7 +125,8 @@ body {
   border-bottom: 5px solid white;
 }
 
-.main-nav__item--cta a {
+.main-nav__item--cta a, 
+.mobile-nav__item--cta a{
   color: white;
   background-color: #ff1b68;
   padding: 0.5rem 1rem;
@@ -107,7 +134,9 @@ body {
 }
 
 .main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
+.main-nav__item--cta a:active, 
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
   color: #ff1b68;
   background: white;
   border: none;
@@ -167,4 +196,85 @@ body {
 .main-footer__link a:hover,
 .main-footer__link a:active {
   color: #ccc;
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 200;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+  background: #ff5454;
+  border-color: #ff5454;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 80%;
+  height: 100vh;
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.5rem;
+}
+
+.open {
+  display: block !important;
 }

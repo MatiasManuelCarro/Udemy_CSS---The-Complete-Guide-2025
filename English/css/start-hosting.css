@@ -1,3 +1,37 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-footer {
+  margin-top: auto;
+}
+
+.form-image {
+  display: block;
+  margin: 0 auto 20px; /* centrado y espacio debajo */
+  max-width: 200px; /* ajusta el tamaño según tu diseño */
+  height: auto;
+}
+
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+}
+
 .register-container {
   width: 90%;
   max-width: 500px;
@@ -5,12 +39,12 @@
   background: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .register-title {
   text-align: center;
-  color: #2A3F5F;
+  color: #2a3f5f;
   margin-bottom: 1.5rem;
 }
 
@@ -22,35 +56,78 @@
 
 .register-form label {
   font-weight: bold;
-  color: #1F242B;
+  color: #1f242b;
   margin-bottom: 0.3rem;
 }
 
 .register-form input,
 .register-form select {
   padding: 0.6rem;
-  border: 1px solid #A7B4C4;
+  border: 1px solid #a7b4c4;
   border-radius: 8px;
   font: inherit;
-  background: #F5F6F7;
-  color: #1F242B;
+  background: #f5f6f7;
+  color: #1f242b;
 }
 
 .register-form input:focus,
 .register-form select:focus {
   outline: none;
-  border-color: #4B6A88;
-  box-shadow: 0 0 4px rgba(75,106,136,0.4);
+  border-color: #4b6a88;
+  box-shadow: 0 0 4px rgba(75, 106, 136, 0.4);
 }
 
 .register-btn {
   width: 100%;
   margin-top: 1rem;
-  background-color: #2A3F5F;
-  border-color: #2A3F5F;
+  background-color: #2a3f5f;
+  border-color: #2a3f5f;
 }
 
 .register-btn:hover {
-  background: #4B6A88;
-  border-color: #4B6A88;
+  background: #4b6a88;
+  border-color: #4b6a88;
+}
+
+select {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+option {
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding-right: 40px;
+  position: relative;
+}
+
+select::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #fff;
 }

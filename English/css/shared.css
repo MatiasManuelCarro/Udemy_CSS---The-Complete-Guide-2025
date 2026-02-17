@@ -220,7 +220,15 @@ body {
 .modal__title {
   text-align: center;
   margin: 0 0 1rem 0;
+  font-size: 1.6rem;          /* más grande que el texto normal */
+  font-weight: 700;           /* negrita para destacar */
+  color: #2A3F5F;             /* azul moderno consistente con botones */
+  letter-spacing: 1px;        /* un poco de espacio entre letras */
+  text-transform: uppercase;  /* todo en mayúsculas para impacto */
+
 }
+
+
 
 .modal__actions {
   text-align: center;

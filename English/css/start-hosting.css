@@ -21,6 +21,12 @@ main {
   margin: 0 auto 20px; /* centrado y espacio debajo */
   max-width: 200px; /* ajusta el tamaño según tu diseño */
   height: auto;
+  transition: transform 0.6s 
+}
+
+.form-image:hover{
+  transform: scale(1.05); 
+
 }
 
 .form-container {
@@ -130,4 +136,59 @@ select::after {
   transform: translateY(-50%);
   pointer-events: none;
   color: #fff;
+}
+
+/* Droplist del plan  */
+
+#plan {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2A3F5F;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  border: 2px solid #0078d7;
+  border-radius: 6px;
+  background: #f9f9f9;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#plan:hover {
+  background: #eef6ff;
+}
+
+#plan option {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  padding: 0.4rem;
+}
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+form input[type="text"]:hover,
+form input[type="email"]:hover,
+form input[type="password"]:hover,
+form textarea:hover {
+  border-color: #0078d7;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 8px rgba(0, 120, 215, 0.6);
+  outline: none; 
 }

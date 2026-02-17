@@ -3,10 +3,9 @@ main {
 }
 
 .main-header {
-  background-color: #2A3F5F;
+  background-color: #2a3f5f;
   padding: 1.25rem 1.5rem; /* antes 0.5rem */
 }
-
 
 .background {
   background: url("../images/plans-background.jpg") center/cover;
@@ -59,13 +58,12 @@ main {
 */
 
 .package__title {
-  color: #2A3F5F;                    
-  font-weight: 800;                   
-  font-size: 1.8rem;                 
-  -webkit-text-stroke: 1px #F5F6F7; 
+  color: #2a3f5f;
+  font-weight: 800;
+  font-size: 1.8rem;
+  -webkit-text-stroke: 1px #f5f6f7;
   margin-bottom: 0.5rem;
 }
-
 
 .package__badge {
   position: absolute;
@@ -82,16 +80,16 @@ main {
 }
 
 .package__subtitle {
-  color: #F5F6F7;
-  -webkit-text-stroke: 1px #1A2533
+  color: #f5f6f7;
+  -webkit-text-stroke: 1px #1a2533;
 }
 
 .package__info {
   padding: 1rem 0.5rem;
-  border: 1px solid #4B6A88;
+  border: 1px solid #4b6a88;
   font-size: 1.2rem;
-  color: #1F242B;
-  background: #F5F6F7;
+  color: #1f242b;
+  background: #f5f6f7;
   border-radius: 8px;
 }
 
@@ -102,7 +100,7 @@ main {
 }
 
 #plus:hover .package__badge {
-  color: #4B6A88;
+  color: #4b6a88;
   background: white;
   /* Comienza la animacion */
   animation: shake 0.5s;
@@ -112,8 +110,8 @@ main {
   background: rgba(75, 106, 136, 0.15);
   float: right;
   border-right: none;
-  border-left: 2px solid #4B6A88;
-  color: #1F242B;
+  border-left: 2px solid #4b6a88;
+  color: #1f242b;
   text-align: right;
   /* radio del plan free */
   border-top-right-radius: 0px;
@@ -132,9 +130,8 @@ main {
 }
 
 #premium {
-    background: rgba(26, 37, 51, 0.95);
+  background: rgba(26, 37, 51, 0.95);
   color: white;
-
 }
 
 #premium .package__title {
@@ -142,8 +139,8 @@ main {
 }
 
 #premium .package__subtitle {
-  color: #F5F6F7;
-  -webkit-text-stroke: 1px #1A2533
+  color: #f5f6f7;
+  -webkit-text-stroke: 1px #1a2533;
 }
 
 .main-footer {
@@ -169,6 +166,29 @@ main {
   animation: shake 0.5s;
 }
 
+/* packages style */
+
+.package__details {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block; /* hace que la lista se centre como bloque */
+  text-align: left;
+}
+.package__details li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.package__details li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0078d7;
+  font-weight: bold;
+}
 
 @keyframes shake {
   0% {
@@ -204,4 +224,4 @@ main {
   100% {
     transform: translate(1px, -1px) rotate(-1deg);
   }
-} 
+}

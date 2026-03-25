@@ -1,0 +1,199 @@
+:root {
+  /* Brand / Primarios */
+  --color-primary: #2A3F5F;
+  /* Azul principal */
+  --color-primary-light: #4B6A88;
+  /* Azul claro */
+  --color-primary-dark: #1A2533;
+  /* Azul muy oscuro */
+
+  /* Neutros */
+  --color-neutral-100: #F5F6F7;
+  /* Gris muy claro */
+  --color-neutral-200: #A7B4C4;
+  /* Gris azulado */
+  --color-neutral-300: #424242;
+  /* Gris oscuro */
+  --color-neutral-400: #1F242B;
+  /* Gris casi negro */
+
+  /* Gradientes */
+  --gradient-overlay: linear-gradient(to top,
+      rgba(42, 63, 95, 0.55) 10%,
+      transparent);
+
+  /* Sombras */
+  --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+  /* Breakpoints media query */
+  /* Mobile  - 640px = 40rem*/
+  /* Desktop - 960px = 60rem */
+  /* Wide - 1200px  = 75rem */
+  /* Ultra-wide - 1600px = 100rem */
+}
+
+
+
+#product-overview {
+  /* shorthand */
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("../images/freedom.jpg") center bottom/cover no-repeat border-box, #ff1b68;
+  /* CODIGO ANTERIOR:
+  background-image: url("/images/freedom.jpg");
+  background-size: cover;
+  background-position: left 10% bottom 20%; 
+  background-repeat: no-repeat;*/
+  width: 100%;
+  height: 33vh;
+  margin-top: 2.75rem;
+  position: relative;
+}
+
+
+#product-overview h1 {
+  color: white;
+  font-family: 'Anton', sans-serif;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  font-size: 1.6rem;
+}
+
+
+.section-title {
+  color: #2ddf5c;
+  text-align: center;
+}
+
+
+.plan {
+  background: #d5ffdc;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.plan--highlighted {
+  background: #19b84c;
+  color: white;
+
+}
+
+.plan__annotation {
+  background: white;
+  color: #19b84c;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.plan__title {
+  color: #0e4f1f;
+}
+
+.plan__price {
+  color: #858585;
+}
+
+.plan--highlighted .plan__title {
+  color: white;
+}
+
+.plan--highlighted .plan__price {
+  /* Combinador */
+  color: #0e4f1f;
+}
+
+.plan__features {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.plan__feature {
+  margin: 0.5rem 0;
+}
+
+
+h1 {
+  font-family: sans-serif;
+  font-size: 2em;
+}
+
+#key-features {
+  background: #ff1b68;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+#key-features>.section-title {
+  color: white;
+  margin: 2rem;
+}
+
+.key-feature__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.key-feature {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+
+.key-feature__image {
+  /* Crea el circulo de la imagen */
+  background: #ffcede;
+  width: 128px;
+  height: 128px;
+  border: 2px solid #424242;
+  border-radius: 50%;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.key-feature__description {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 40rem) {
+
+  /* 40rem = 640px */
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
+
+  #product-overview h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .plan__list {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .plan {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 13rem;
+    max-width: 25rem;
+    width: auto;
+
+  }
+
+  .plan--highlighted {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); 
+  }
+}

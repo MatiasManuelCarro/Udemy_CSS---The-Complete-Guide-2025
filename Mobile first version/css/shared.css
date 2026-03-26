@@ -15,6 +15,13 @@ body {
   overflow-x: hidden;
 }
 
+main{
+  /* calculo del 100% del view port - el alto de la bara de navegacion - el espacio del footer */
+  min-height: calc(100vh - 3.5rem - 8rem);
+  margin-top: 3.5rem;
+}
+
+
 .backdrop {
   position: fixed;
   display: none;

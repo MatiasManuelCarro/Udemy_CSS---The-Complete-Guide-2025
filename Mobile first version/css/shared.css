@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa fuente Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa fuente Anton */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa fuente Inter */
+
 * {
   /* Aplica border-box a TODOS los elementos */
   box-sizing: border-box;
@@ -341,8 +348,10 @@ main{
 
 .main-nav__item a:hover,
 .main-nav__item a:active {
-  color: white;
+  color: #ff1b68;
   border-bottom: 5px solid white;
+  border: none;
+  
 }
 
 

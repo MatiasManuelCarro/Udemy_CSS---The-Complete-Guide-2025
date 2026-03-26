@@ -135,7 +135,23 @@ main{
   border: 1.5px solid white;
 }
 
+/* Nota: Es necesario JS para cambiar esto de disabled a enabled en runtime */
+.button[disabled]{
+  cursor: not-allowed;
+  border: #a1a1a1;
+  background-color: #ccc;
+  color: #a1a1a1;
+}
 
+.button[disabled]:hover{
+  background: #ccc;
+  color: #a1a1a1;
+}
+
+.button[disabled]:active{
+  background: #ccc;
+  color: #a1a1a1;
+}
 
 /* Botones de los planes */
 .button {
@@ -155,7 +171,8 @@ main{
   color: #0e4f1f;
 }
 
-.button:active {
+/* Si el boton NO esta disabled - hacer esto al activar */
+.button:not([disabled]):active {
   /* mueve el boton a lpresionarse 2x hacia abajo y lo achica*/
   transform: translateY(2px) scale(0.98);
   box-shadow: 0 2px 0 #2c5fa8;

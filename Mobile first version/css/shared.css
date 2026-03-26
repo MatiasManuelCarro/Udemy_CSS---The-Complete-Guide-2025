@@ -70,7 +70,6 @@ body {
   color: #0e4f1f;
   text-decoration: none; /* elimina el subrayado del link */
   font-weight: bold;
-  font-size: 3rem;
   height: 3rem;
   display: inline-block;
   vertical-align: middle;
@@ -80,68 +79,58 @@ body {
   height: 100%;
 }
 
+
+/* botones barra de navegacion */
+
+/* mueve el boton start hosting hacia la derecha  */
+
 .main-nav {
   display: inline-block;
+  width: calc(100% - 122px); 
+  /*El total de la pantalla menos el icono */
   text-align: right;
-  width: calc(100% - 122px); /* el total de la pagina menos los pixel que ocupa el link de uhost */
-  vertical-align: middle;
 }
 
-.main-nav__items {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
-.main-nav__item {
-  display: inline-block;
-  margin: 0 16px;
-}
 
+/* los oculta en mobile */
 .main-nav__item a, 
 .mobile-nav__item a{
-  /* a se refiere a los liks - son los links dentro de main-nav__item */
-  color: #0e4f1f;
-  text-decoration: none; /* elimina el subrayado del link */
+  display: none;
+}
+
+/* los oculta en mobile  */
+.main-nav__items,
+.mobile-nav__items {
+  list-style: none;   /* quita los puntos */
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Boton de start_hosting */
+#start_hosting { 
+  display: inline-block;
+  color: white;
+  text-decoration: none;
   font-weight: bold;
-  padding: 0.2rem 0;
-}
-
-/* se agrupan estas dos clases debajo 
-  .main-nav__item a:hover 
-    color: white;
-  }
-  
-  .main-nav__item a:active {
-    color: white;
-  
-  }
-  
-  */
-
-.main-nav__item a:hover,
-.main-nav__item a:active {
-  color: white;
-  border-bottom: 5px solid white;
-}
-
-.main-nav__item--cta a, 
-.mobile-nav__item--cta a{
-  color: white;
   background-color: #ff1b68;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+  transition: all 0.1s ease;
+  border: 1.5px solid #ff1b68; 
+  transition: all 0.1s ease;
 }
 
-.main-nav__item--cta a:hover,
-.main-nav__item--cta a:active, 
-.mobile-nav__item--cta a:hover,
-.mobile-nav__item--cta a:active {
+#start_hosting:hover{
   color: #ff1b68;
-  background: white;
-  border: none;
+  background-color:white;
+  border: 1.5px solid white;
 }
 
+
+
+/* Botones de los planes */
 .button {
   background-color: #0e4f1f;
   color: white;
@@ -275,6 +264,62 @@ body {
   font-size: 1.5rem;
 }
 
+
 .open {
   display: block !important;
+}
+
+@media (min-width: 50rem){
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  width: calc(100% - 122px); /* el total de la pagina menos los pixel que ocupa el link de uhost */
+  vertical-align: middle;
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-nav__item a, 
+.mobile-nav__item a{
+  /* a se refiere a los liks - son los links dentro de main-nav__item */
+  display: inline-block;
+  color: #0e4f1f;
+  text-decoration: none; /* elimina el subrayado del link */
+  font-weight: bold;
+  padding: 0.2rem 0;
+} 
+
+.main-nav__item--cta a, 
+.mobile-nav__item--cta a{
+  color: white;
+  background-color: #ff1b68;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active, 
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
+  color: #ff1b68;
+  background: white;
+  border: none;
+}  
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+
 }

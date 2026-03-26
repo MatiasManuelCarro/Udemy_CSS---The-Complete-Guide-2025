@@ -84,6 +84,8 @@
 .plan__annotation {
   background: white;
   color: #19b84c;
+  /* Tamaño de fuente variable*/
+  font-size: clamp(1.5rem, 2vw, 2rem);
   padding: 0.5rem;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
@@ -140,12 +142,6 @@ h1 {
   text-align: center;
 }
 
-.key-feature {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
-}
-
 .key-feature__image {
   /* Crea el circulo de la imagen */
   background: #ffcede;
@@ -164,7 +160,7 @@ h1 {
   font-size: 1.2rem;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) and (min-height: 50rem){
 
   /* 40rem = 640px */
   #product-overview {
@@ -177,7 +173,7 @@ h1 {
   }
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
   .plan__list {
     width: 100%;
     margin: auto;
@@ -186,14 +182,24 @@ h1 {
 
   .plan {
     display: inline-block;
+    width: 30%;
     vertical-align: middle;
     min-width: 13rem;
     max-width: 25rem;
-    width: auto;
+
 
   }
 
   .plan--highlighted {
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); 
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 50rem) {
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 25rem;
+    vertical-align: top;
   }
 }

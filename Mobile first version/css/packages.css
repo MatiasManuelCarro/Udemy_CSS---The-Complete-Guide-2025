@@ -173,3 +173,31 @@ main {
     transform: translate(1px, -1px) rotate(-1deg);
   }
 }
+
+@media (min-width: 50rem) {
+  main {
+    max-width: 90rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .package {
+  border-left: 4px solid #0e4f1f;
+  }
+
+  #free {
+      border-right: 4px solid #0e4f1f;
+  }
+
+  .package:hover,
+.package:active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-color: #ff5454;
+}
+
+#free:hover,
+#free:active {
+  border-color: #ff5454;
+}
+
+}

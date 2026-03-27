@@ -19,6 +19,11 @@ body {
     background: white;
     padding: 10px;
     border: 5px solid black;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* tambien se puede escribir asi */
+    /* flex-flow: row wrap */
+    align-items: flex-start;
   }
 
 .item-1 {

@@ -72,7 +72,7 @@ main{
 }
 
 .toggle-button__bar {
-  width: 75%;
+  width: 100%;
   height: 0.1rem;
   background: black;
   display: block;
@@ -232,8 +232,12 @@ main{
 }
 
 .modal__title {
-  text-align: center;
+text-align: center;
   margin: 0 0 1rem 0;
+  font-size: 1.6rem;          /* más grande que el texto normal */
+  font-weight: 700;           /* negrita para destacar */
+  letter-spacing: 1px;        /* un poco de espacio entre letras */
+
 }
 
 .modal__actions {
@@ -278,13 +282,22 @@ main{
   height: 100vh;
 }
 
+/* Esto pasa a funcionar cuando js abre el mobile nav */
+.mobile-nav.open .mobile-nav__item a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+
 .mobile-nav__items {
   width: 90%;
   height: 100%;
   list-style: none;
   margin: 10% auto;
   padding: 0;
-  text-align: center;
+  text-align: right;
 }
 
 .mobile-nav__item {
@@ -293,7 +306,37 @@ main{
 
 .mobile-nav__item a {
   font-size: 1.5rem;
+    display: inline-block;
+  color: #0e4f1f;
+  text-decoration: none; /* elimina el subrayado del link */
+  font-weight: bold;
+  padding: 0.2rem 0;
 }
+
+/* inline block para el tamaño del boton */
+.mobile-nav__item--cta{
+display: inline-block;
+margin: 0; /* elimina el espacio extra arriba y abajo */
+}
+
+.mobile-nav__item--cta a{
+  color: white;
+  background-color: #ff1b68;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active,
+.mobile-nav.open .mobile-nav__item a:hover,
+.mobile-nav.open .mobile-nav__item a:active {
+  color: #ff1b68;
+  background: white;
+  border: none;
+}  
+
+
+
 
 
 .open {
@@ -319,6 +362,18 @@ main{
   margin: 0 16px;
 }
 
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 30%;
+  height: 100vh;
+}
+
+
 .main-nav__item a, 
 .mobile-nav__item a{
   /* a se refiere a los liks - son los links dentro de main-nav__item */
@@ -340,11 +395,22 @@ main{
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active, 
 .mobile-nav__item--cta a:hover,
-.mobile-nav__item--cta a:active {
+.mobile-nav__item--cta a:active,
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
   color: #ff1b68;
   background: white;
   border: none;
 }  
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
 
 .main-nav__item a:hover,
 .main-nav__item a:active {

@@ -86,8 +86,13 @@ if (cancelBtn) {
 //Backdrop click closes modal and mobile nav
 if (backdrop) {
   backdrop.addEventListener("click", function () {
-    if (mobileNav) mobileNav.classList.remove("open");
-    closeModal();
+    if (mobileNav && mobileNav.classList.contains("open")) {
+      mobileNav.classList.remove("open");
+      backdrop.classList.remove("open");
+    }
+    if (modal && modal.classList.contains("open")) {
+      closeModal();
+    }
   });
 }
 

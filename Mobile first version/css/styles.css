@@ -135,6 +135,9 @@ h1 {
 }
 
 .key-feature__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -159,7 +162,7 @@ h1 {
   font-size: 1.2rem;
 }
 
-@media (min-width: 50rem) and (min-height: 50rem){
+@media (min-width: 50rem) and (min-height: 50rem) {
 
   /* 40rem = 640px */
   #product-overview {
@@ -175,14 +178,18 @@ h1 {
 @media (min-width: 50rem) {
   .plan__list {
     width: 100%;
-    margin: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   .plan {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 28rem;
     width: 30%;
-    vertical-align: middle;
     min-width: 13rem;
     max-width: 25rem;
 
@@ -191,14 +198,25 @@ h1 {
 
   .plan--highlighted {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    height: 30rem;
+    z-index: 50;
   }
 }
 
 @media (min-width: 50rem) {
   .key-feature {
-    display: inline-block;
     width: 30%;
     max-width: 25rem;
     vertical-align: top;
+  }
+
+  .key-feature__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 }

@@ -1,15 +1,36 @@
 main {
-    padding-top: 1rem;
+    flex: 1;
+    /* mantiene el footer abajo */
+    padding-top: 5rem;
 }
 
+html,
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+
+}
+
+
 .signup-title {
+    margin: auto;
     text-align: center;
     font-size: 1.8rem;
     color: #ff5454;
 }
 
 .signup-form {
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 20rem;
+    grid-row-gap: 1rem;
+    grid-column-gap: 0.5rem;   
+    margin: auto;
+    max-width: 20rem;
+    justify-self: center;
+    margin: 3rem auto 0 auto; /* margen superior de 3rem */
+    /* grid-auto-rows: 2rem;
+    grid-row-gap: 0.5rem; */
 }
 
 .signup-form label {
@@ -20,8 +41,6 @@ main {
 .signup-form label,
 .signup-form input,
 .signup-form select {
-    display: block;
-    margin-top: 1rem;
     width: 100%;
 }
 
@@ -62,6 +81,7 @@ main {
     appearance: none;
 }
 
+
 .signup-form input[type="checkbox"]:checked {
     background: #2ddf5c;
     border: #0e4f1f;
@@ -77,12 +97,35 @@ main {
 
 .signup-form button[type="submit"] {
     display: block;
-    margin-top: 1rem;
 }
 
 @media (min-width: 50rem) {
+
     .signup-form {
-        margin: auto;
-        width: 25rem;
+        margin: 3rem auto 0 auto; /* margen superior de 3rem */
+        width: 35rem;
+        grid-template-columns: 10rem auto;
+        grid-row-gap: 1rem;
+        grid-column-gap: 0.5rem;
+        max-width: 35rem;
+    }
+
+    /* .signup-form [id="title"] {
+        grid-column: span 2;
+    } */
+
+    .signup-form_checkbox {
+        grid-column: span 2;
     }
 }
+
+@media (max-width: 22rem){
+.signup-title {
+    
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ff5454;
+    max-width: 20rem;
+    margin: auto;
+}
+} 

@@ -1,8 +1,8 @@
 main {
-  padding-top: 2rem;
+  /* padding-top: 2rem;
     flex: 1;
-  max-height: calc(100vh - 8rem); /* 8rem = altura del footer */
-  overflow-y: auto; /* agrega scroll si el contenido excede */
+  max-height: calc(100vh - 8rem); 
+  overflow-y: auto;  */
 }
 
 .background {
@@ -123,9 +123,6 @@ main {
   color: #bbb;
 }
 
-.main-footer {
-  margin-top: 35px;
-}
 
 /* Este codigo es mio no del curso */
 
